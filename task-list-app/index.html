@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Llista de Tasques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>📋 Llista de Tasques</h1>
+      <p class="subtitle"><span id="pending-count">0</span> tasques pendents</p>
+    </header>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Afegeix una nova tasca..." autocomplete="off" required>
+      <button type="submit">Afegir</button>
+    </form>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Totes</button>
+      <button class="filter-btn" data-filter="pending">Pendents</button>
+      <button class="filter-btn" data-filter="completed">Completades</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <footer>
+      <button id="clear-completed">Esborra completades</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
